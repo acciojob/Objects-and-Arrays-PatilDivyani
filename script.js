@@ -6,15 +6,14 @@ const person = {
 };
 
 // Write your code here, make sure the name of variables is exactly same as mentioned in the problem statement
-var team = players;
-/var team1 = players;
-var team1 = {}; // the new empty object
+// Create a reference to players array
+const team = players;
 
-// let's copy all user properties into it
-for (let key in players) {
-  team1[key] = players[key];
-}
-var cap1 = Object.assign({}, players);
+// Create a copy of players array
+const team1 = players.slice();
+
+// Create a copy of person object
+const cap1 = Object.assign({}, person);
 
 window.players = players;
 window.person = person;
